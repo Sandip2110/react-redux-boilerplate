@@ -20,8 +20,9 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_API_ENV=LOCAL react-scripts start",
+    "build:uat": "REACT_APP_API_ENV=UAT react-scripts build",
+    "build:prod": "REACT_APP_API_ENV=PROD react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
