@@ -9,7 +9,12 @@ You can jump into your project just in 2 minutes, all you have to do is, follow 
 2. run `npm install`
 3. `npm start` (In package.josn you can change the REACT_APP_API_ENV varibale to LOCAL || UAT || PROD to run as the corresponding environment)
 
+### Project setup
+After you have succesfully ran the project you can go to the `config.ts` file in the src folder. You will find 3 env setup there. You can add your webUrl where your project will run and also add your base api url.
+
 ### To build the project:
 To make a production build, you will run `npm run build:prod`
 To make a uat build, you will run `npm run build:uat`
+
+
 AND HERE YOU GO... All set to work on your project.
