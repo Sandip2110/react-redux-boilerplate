@@ -11,7 +11,7 @@ enum WebUrl {
 enum ApiUrl {
     LOCAL = "http://localhost:9000",
     PROD = "https://api.xyz:9000",
-    UAT = "https://uatapi.xyz:9000",
+    UAT = "https://uat.api.xyz:9000",
 }
 const processEnv = (process.env.REACT_APP_API_ENV === "PROD" || process.env.REACT_APP_API_ENV === "LOCAL") ? process.env.REACT_APP_API_ENV : "UAT";
 const env: Env = Env[processEnv];
