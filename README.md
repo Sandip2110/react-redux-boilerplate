@@ -6,6 +6,10 @@ You can jump into your project just in 2 minutes, all you have to do is, follow 
 
 ### To run the project: 
 1. clone it
-2. run npm install
-3. npm start
+2. run `npm install`
+3. `npm start` (In package.josn you can change the REACT_APP_API_ENV varibale to LOCAL || UAT || PROD to run as the corresponding environment)
+
+### To build the project:
+To make a production build, you will run `npm run build:prod`
+To make a uat build, you will run `npm run build:uat`
 AND HERE YOU GO... All set to work on your project.
