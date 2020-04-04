@@ -2,7 +2,7 @@ import axios from "axios";
 import {IActions} from "../models";
 import {baseUrl} from "../config";
 
-export const idTokenName = "refyneToken";
+export const idTokenName = "storageName";
 export let token: string = "";
 
 export function saveToken(idToken: string) {

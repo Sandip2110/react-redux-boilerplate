@@ -9,7 +9,7 @@ enum WebUrl {
     PROD = " https://xyz.com",
 }
 enum ApiUrl {
-    LOCAL = "http://localhost:9000",
+    LOCAL = "http://www.mocky.io/v2",
     PROD = "https://api.xyz:9000",
     UAT = "https://uat.api.xyz:9000",
 }
