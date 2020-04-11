@@ -1,6 +1,7 @@
 import axios from "axios";
 import {IActions} from "../models";
 import {baseUrl} from "../config";
+import store from "../store";
 
 export const idTokenName = "storageName";
 export let token: string = "";
@@ -20,9 +21,9 @@ function getHeader(base64Str: string, authType?: string) {
     }
 }
 
-export default async function dispatch(dispatch: any,  actionDetails: IActions) {
+export default async function dispatch(actionDetails: IActions) {
     let splitActionName = actionDetails.actionName.split("_");
-    dispatch({type: actionDetails.actionName, payload: actionDetails.body});
+    store.dispatch({type: actionDetails.actionName, payload: actionDetails.body});
     if (splitActionName[0] === "REQUEST") {
         try {
             let response: any = undefined;
@@ -35,13 +36,13 @@ export default async function dispatch(dispatch: any,  actionDetails: IActions) 
                     {headers: getHeader(actionDetails.token ? actionDetails.token : token, actionDetails.authType), timeout: 30000});
             }
             if (response && (response.status === 200 || response.status === 204)) {
-                dispatch({type: `${actionDetails.actionName}_SUCCESS`, payload: response.data});
+                store.dispatch({type: `${actionDetails.actionName}_SUCCESS`, payload: response.data});
                 return Promise.resolve(response.data);
             } else {
                 return Promise.reject(response);
             }
         } catch (error) {
-            dispatch({type: `${actionDetails.actionName}_FAILURE`, payload: error.data});
+            store.dispatch({type: `${actionDetails.actionName}_FAILURE`, payload: error.data});
             return Promise.reject(error);
         }
     }

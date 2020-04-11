@@ -1,15 +1,14 @@
 import React from "react";
 import "./styles.scss";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import dispatch from "../../middleware";
 import {getStudentList} from "../../actions/demoActions";
 import {IReduxState} from "../../reducers";
 
 export default function Dashboard() {
-    const storeDispatch = useDispatch();
     const listOfStudents: string[] = useSelector((state: IReduxState) => state.demoReducer.list);
     function handleClick() {
-        dispatch(storeDispatch, getStudentList());
+        dispatch(getStudentList());
     }
     return (
         <div className={"middle"}>
