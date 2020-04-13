@@ -16,5 +16,6 @@ After you have succesfully ran the project you can go to the `config.ts` file in
 To make a production build, you will run `npm run build:prod`
 To make a uat build, you will run `npm run build:uat`
 
+*P.S: If your build is failing in the server due to warnings (Because of treating warning as errors) you can add CI=false in your build command and it will resolve the issue.
 
 AND HERE YOU GO... All set to work on your project.
