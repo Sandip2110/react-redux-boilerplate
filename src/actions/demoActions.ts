@@ -1,11 +1,11 @@
-import {IActions} from "../models";
+import {Actions} from "../models";
 
 export enum Action {
     TEST_ACTION_NAME = "TEST_ACTION_NAME",
     REQUEST_GET_LIST = "REQUEST_GET_LIST",
     REQUEST_SAVE_NAME = "REQUEST_SAVE_NAME",
 }
-export function getStudentList(): IActions {
+export function getStudentList(): Actions {
     return {
         actionName: Action.REQUEST_GET_LIST,
         type: "GET",

@@ -1,5 +1,5 @@
 import axios from "axios";
-import {IActions} from "../models";
+import {Actions} from "../models";
 import {baseUrl} from "../config";
 import store from "../store";
 
@@ -21,7 +21,7 @@ function getHeader(base64Str: string, authType?: string) {
     }
 }
 
-export default async function dispatch(actionDetails: IActions) {
+export default async function dispatch(actionDetails: Actions) {
     let splitActionName = actionDetails.actionName.split("_");
     store.dispatch({type: actionDetails.actionName, payload: actionDetails.body});
     if (splitActionName[0] === "REQUEST") {

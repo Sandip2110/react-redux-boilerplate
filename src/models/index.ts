@@ -1,4 +1,4 @@
-export interface IActions {
+export interface Actions {
     actionName: string;
     body?: object;
     type?: string;
